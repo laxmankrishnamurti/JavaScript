@@ -22,14 +22,14 @@ console.log(isoDate === jsonDate);                  //Output : true
     JSON is "self-describing" and easy to understand
  */
 
-console.log(todayStatus.toLocaleDateString());          //Output : 10/01/2024
 console.log(todayStatus.toLocaleString());             //Output : 10/01/2024, 11:15:50
+console.log(todayStatus.toLocaleDateString());          //Output : 10/01/2024
 
-let myDate = new Date(2024,1,4);
+let myDate = new Date(2024,1,4);                    //(format : yy/mm/dd)
 console.log(myDate.toDateString());                 //Output : Sun Feb 04 2024
 console.log(myDate.toLocaleString());              //Output : 04/02/2024, 00:00:00
 
-//Months and weeks are start from 0th index in terms of while we create a specific date itself.
+//Months and weeks are start from 0th index in terms of creating a specific date.
 
 /**
  * What is Time-stamp?
@@ -47,7 +47,7 @@ let paymentTime = (paymentTimeStamp);              //Output : 1704866834937
 paymentTimeStamp = paymentTimeStamp.toLocaleString('en-IN');
 console.log(paymentTimeStamp);              //Output : 17,04,86,69,12,876
 
-//Date.now() :- claculate milisecond vlaue from Jan 1 1970.
+//Date.now() :- calculate milisecond vlaue from Jan 1 1970.
 
 let debitTime = new Date(2024,1,4);
 console.log(debitTime);            //Output : Sun Feb 04 2024 00:00:00 GMT+0530 (India Standard Time)

@@ -26,7 +26,7 @@ console.log(myName.toLowerCase());             //for lowercase
 console.log(myName.charAt(2));                //to check which character is present at the specific index number.
 console.log(myName.indexOf('K'));             //to check what's the index value of that particular character.
 console.log(myName.substring(0, 4));         //to get a piece of the string.
-console.log(myName.slice(-6));           //It's like substring but we can pass here the negative values.
+console.log(myName.slice(-6));               //It's like substring but we can pass here the negative values.
 console.log(myName.slice(-5, -1))
 
 /**
@@ -55,7 +55,7 @@ console.log(myName1.length);                    //13
 
 const searchLink = "https://www.google.com/";
 console.log(searchLink.replace('google', 'laxman'));        //Output : https://www.laxman.com/
-console.log(searchLink.includes('laxman'));         //Output : false
+console.log(searchLink.includes('laxman'));                 //Output : false {because we did not change the actual variable value.}
 
 //include returns booleans value.
 

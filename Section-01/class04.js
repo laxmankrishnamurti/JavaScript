@@ -6,13 +6,13 @@ console.log(typeof price);          //Output : number  (Primitive type number)
 const productPrice = new Number(100);
 console.log(typeof productPrice);             //Output : object (objective type number)
 
-//Convert the nunmber into a String
+//Convert the number into a String
 
 console.log(typeof productPrice.toString());        //Output : string
 
 //let's include the GST in productPrice
 
-//Precision Value : It is used to show how the decimal number values.
+//Precision Value : It is used to show the decimal number values.
 
 const PayableAmount = (productPrice + (productPrice * 0.18));
 console.log(PayableAmount);                                     //Output : 118
@@ -55,7 +55,7 @@ age1 = ((Math.random() * 10) + 1);       //we have added 1 because of avoiding {
 console.log(age1);          //Range : { 1 - 10 or 10+ }
 
 console.log(Math.ceil(age1));           //for getting highest age {Range : 2 - 11} because 1.2122 is directly goes upto 2 not 1.
-console.log(Math.floor(age1));         //for getting lowest age {Range : 1 - 10} because 1.2122 is directly goes to 1 not 2 because floor choose lowest newarest value.
+console.log(Math.floor(age1));         //for getting lowest age {Range : 1 - 10} because 1.9822 is directly goes to 1 not 2 because floor choose lowest newarest value.
 
 //Let's try to gettings a random number between our Range.
 
@@ -64,7 +64,7 @@ let maxRange = 25;
 // console.log((Math.random() * (maxRange - minRange)) + 1);
 // console.log((Math.random() * (maxRange - minRange) + 1));            //Range : {1 - 5}
 const getMinValue = ((Math.floor(((Math.random() * (maxRange - minRange)) + 1) + minRange)));
-console.log(getMinValue);
+console.log(getMinValue);                                                                            //Range : {21-25}
 const getMaxValue = ((Math.floor(((Math.random() * (maxRange - minRange)) + 1) + maxRange)));       //Range : {26-30}
 console.log(getMaxValue);
 const getMaxValue1 = ((Math.ceil(((Math.random() * (maxRange - minRange)) + 1) + maxRange)));      //Range : {27-31}

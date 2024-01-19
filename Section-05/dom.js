@@ -86,4 +86,4 @@ outElement.outerHTML = `<li class = 'list-name'>TypeScript</li>`;
 
 const rust = document.querySelector('li:nth-child(7)');
 console.log(rust.textContent);          //just for checking
-rust.remove();
+rust.remove();                         //Deletion successful.
