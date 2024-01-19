@@ -13,10 +13,19 @@ console.log(myName, myName2, myAge);            //Output : Laxman Krishnamurti S
 //Print like a table : console.table([v1,v2,v3.......n]) ; 
 
 console.table([myName, myName2, myAge]);            //Variables tracked like an array's element.
+/*
+┌─────────┬───────────────────────┐
+│ (index) │        Values         │
+├─────────┼───────────────────────┤
+│    0    │ 'Laxman Krishnamurti' │
+│    1    │     'Sonu Kumar'      │
+│    2    │          21           │
+└─────────┴───────────────────────┘
+*/
 
 /**
  * Note :- (1). Prefer not to use var because of issue in block scope and functional scope.
- *        (2). Without Initialization of variable's value the bydefault value is "undefined".
+ *         (2). Without Initialization of a variable it's bydefault value is "undefined".
  *        (3). Code Readability should be high.
  */
 
@@ -29,7 +38,7 @@ console.table([myName, myName2, myAge]);            //Variables tracked like an 
  * (2). Non-Primitive Data-types :- Array, Object, Function
  * 
  * Primitive data-types is also known as "call by value".
- * Non-primitive data-type is also known as "call by refrence".
+ * Non-primitive data-type is also known as "call by reference".
  */
 
 /**

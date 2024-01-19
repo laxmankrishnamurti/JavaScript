@@ -1,5 +1,5 @@
 /**
- * Arrray :- Arrray is just like a variable which can store multiple values which data type may be same or different. Array is a Non-primitive data type so it is store in the Heap memory so that's why any other array can get the direct reference point of that reffered array.
+ * Arrray :- Arrray is just like a variable which can store multiple values which data type may be same or different. Array is a Non-primitive data type so it is stored in the Heap memory so that's why any other array can get the direct reference point of that reffered array.
  */
 
 const naturalNumber = [1,2,3,4,5,6,7,8,9];
@@ -74,7 +74,7 @@ console.log(getSection);                                    //Output : (2) ['In
 console.log(populatedCountry);                             //Output : (3) ['Russia', 'Iran', 'Pakistan']
 
 /**
- * Concatination of an Array :- Concatination menas add multiples array in a single array.
+ * Concatination of an Array :- Concatination menas add multiple array in a single array.
  */
 
 const asianCountry = ['India', 'China', 'Pakistan', 'Japan', 'Bhutan'];
@@ -110,7 +110,7 @@ console.log(Array.isArray(getAllSports));               //Output : true
 /**
  * Array.from() or Array.of() :- It is used to make an new array from a specific point.
  * 
- * If JavaScript unable to convert an element into an array then it will return a blank array.
+ * If JavaScript unable to convert an element into an array then it will simply return an blank array.
  */
 
 let score1 = 95;
@@ -119,4 +119,3 @@ let score3 = 89;
 
 const allMarks = Array.of(score1, score2, score3);
 console.log(allMarks);                                  //Output : (3) [95, 91, 89]
-
