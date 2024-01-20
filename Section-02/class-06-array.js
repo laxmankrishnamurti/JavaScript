@@ -119,3 +119,38 @@ let score3 = 89;
 
 const allMarks = Array.of(score1, score2, score3);
 console.log(allMarks);                                  //Output : (3) [95, 91, 89]
+
+//Array.from() ::
+
+let myName = "Laxman Krishnamurti";
+let myArr = Array.from(myName);
+console.log(myArr);
+
+/**
+ * Output : ['L', 'a', 'x', 'm', 'a', 'n', ' ', 'K', 'r', 'i', 's', 'h', 'n', 'a', 'm', 'u', 'r', 't', 'i']
+ */
+
+let numbers = [1,2,3,4,5,6,7,8,9,10];
+let returnEven = (num) => {
+    if(typeof(num) === 'number'){
+        if(num % 2 == 0){
+            return num;
+        }
+    }
+    return 0;
+}
+let even = Array.from(numbers, returnEven);
+console.log(even);
+
+//Output : [0, 2, 0, 4, 0, 6, 0, 8, 0, 10]
+
+let numStr = '123456789';
+let getNum = Array.from(numStr, Number);
+console.log(getNum);
+
+/**
+ * Output : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ */
+
+console.log(typeof(getNum));        //Output : object
+console.log(typeof(getNum[1]));     //Output : number
