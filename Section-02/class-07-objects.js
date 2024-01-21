@@ -73,3 +73,15 @@ userDetails.greetings();                    //Output : Namaste Laxman Krishnamur
  * this :- When we refered the same objects and we want to access the object key-value pairs inside the object then we use this keyword. this has access of all the key-value pairs.
  */
 
+//Instead of doing this we can define the method into the object.
+
+const user = {
+    name : 'Harshad Mehta',
+    age : 21,
+    email : 'harshadmehta@gmail.com',
+    sayHello : function() {
+        console.log(`Hello ${this.name}`);
+    }
+}
+console.log(user);      //Output : {name: 'Harshad Mehta', age: 21, email: 'harshadmehta@gmail.com', greetings: ƒ}
+user.sayHello();        //Output : Hello Harshad Mehta

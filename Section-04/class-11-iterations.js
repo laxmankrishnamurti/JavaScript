@@ -2,6 +2,7 @@
  * Iterations :- Iteration simply means repetation. Genrally in programming language there are three traditional way for iteration. But, in JavaScript there are multiple ways for Iterations. Iteration is also known as loop.
  * 
  * Iterables :- On which we can run a loop called iterables. { Ex :- String, Array, Object}
+ *              Which is array like object. It means which have length & index property.
  * 
  * Traditional loop:-
  * (1). for loop
@@ -111,8 +112,18 @@ for(let country of countries){
  * (2) ['PAK', 'Pakistan']
  */
 
-//can Map has lenght property?
-//console.log(countries.length);          //ans : no, Map dosen't have length property.
+/**
+ * can Map has lenght property?
+ * console.log(countries.length);          //ans : no, Map dosen't have length property.
+ * This is not true. 
+ * 
+ * for checking the size of the map object then we use size property.
+*/
+console.log(countries.size);                //Output : 3
+/**
+ * Map has length property but access it by using size property.
+ */
+
 //const checkCountry = countries.clear();         //clear method used to clear the map elements.
 //console.log(checkCountry);                      //Output : undefined
 //console.log(countries);                         //Output : Map(0) {size: 0}
@@ -122,8 +133,8 @@ console.log(countries);
 //Output : Map(2) {'USA' => 'United states of America', 'PAK' => 'Pakistan'}
 
 for(let [key, vlaue] of countries){
-    //console.log(key);                       //Output : USA PAK
-    //console.log(vlaue);                     //United states of America
+    // console.log(key);                       //Output : USA PAK
+    console.log(vlaue);                     //United states of America  Pakistan
 }
 
 //for-in-loop       :: gives us the index vlaue of each elements
@@ -138,7 +149,7 @@ for(let user in userInfo){
 }
 //Output : name age email
 
-for(let fighter in fighters){
+for(let fighter in fighters){               //fighters = Bhagat Singh
     //console.log(fighter);
 }
 //Output : 0 1 2 3 4 5 6 7 8 9 10 11
@@ -154,7 +165,17 @@ for(let fighter in fighters){
 //     console.log(name);
 // }
 
-//We can not run for in loop on Map and objects.
+//We can not run for in loop on Map but instead of this we can use forEach mehthod. Let's try to run a loop over Map.
+
+countries.forEach( (countryName) => {
+    console.log(countryName);
+})
+
+/**
+ * Output :
+ *          United states of America
+ *          Pakistan
+ */
 
 /************************************************************* Array Specific methods ***************************************/
 
@@ -245,9 +266,9 @@ const oddNumebrs = naturalNumebrs.map( (num, index, arr ) => {
     // console.log(arr);
     return 0;
 })
-//console.log(oddNumebrs);
+console.log(oddNumebrs);
 //Output : (16) [1, 0, 3, 'laxman', 0, 5, 0, 7, 0, 9, 0, 11, 0, 13, 0, 15]  {Unexpected Output}
-//Output : 1 4 6 8 10 12 14
+//Output : 1 4 6 8 10 12 14     (index - value)
 //Output : (16) [1, 2, 3, 'laxman', 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]  :: 7-times {is equal to the number of odd}
 
 /****************************************************** Chaining ********************************************************/
@@ -271,7 +292,7 @@ console.log(newNumer);      //Output : (5) [12, 14, 16, 18, 20]
 
 /**
  * (1). Initial value :- for accumulator
- * (2). accumulator :- is the sum of accumulator and currentvalue
+ * (2). accumulator :- is the sum of accumulator and currentvalue, but we first we need a initial vlaue for this.
  * (3). current value :- is the current vlaue of the array
  */
 
@@ -298,9 +319,20 @@ const userCart = [
     }
 ]
 
+// const totalAmount = userCart.reduce( (acc, current) => {
+//     if(typeof current.itemPrice === 'number'){
+//         return (acc + current.itemPrice);
+//     }   
+// }, 0)
+// console.log(totalAmount);           //Output : 98100
+
+//Initialize the accumulator value through a variable.
+
+const initialPrice = 0;
+
 const totalAmount = userCart.reduce( (acc, current) => {
     if(typeof current.itemPrice === 'number'){
         return (acc + current.itemPrice);
     }   
-}, 0)
+}, initialPrice)    
 console.log(totalAmount);           //Output : 98100

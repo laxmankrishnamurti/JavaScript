@@ -11,7 +11,7 @@ constructorObject.height = '160cm';
 console.log(constructorObject);
 
 //Output : {name: 'Laxman Krishnamurti', age: 21, height: '160cm'}  
-//Object which is created by using new called Constructor object;
+//Object which is created by using new-keyword called Constructor object;
 
 //Let's track the external entries in the object.
 
@@ -46,8 +46,8 @@ console.log(userInfo);
 
 //let's access the nested property
 
-console.log(userInfo.name?.fullName.firstName);             //Output : Laxman
-console.log(userInfo.named?.fullName.firstName);            //Output : undefined {because, there is no any named property is available in that object.}
+console.log(userInfo.name?.fullName?.firstName);             //Output : Laxman
+console.log(userInfo.named?.fullName?.firstName);            //Output : undefined {because, there is no any named property is available in that object.}
 
 //Object Concatination{means combine two or more objects in a single object}
 
@@ -65,10 +65,10 @@ const user2 = {
     gender : 'female'
 }
 
-const allUsers = Object.assign({}, user1, user2);
+const allUsers = Object.assign({}, user1, user2);    //Structure :: {object.assign(target, source1, source2, source3......sourceN)}
 console.log(allUsers);
 
-//Output : {name: 'Fruti rathore', age: 17, gender: 'female'} because when both of objects has the same key-value then the last object key-value property is assigned to the new object.
+//Output : {name: 'Fruti rathore', age: 17, gender: 'female'} because when both of objects has the same key-value then the last object's key-value property is assigned to the new object.
 
 user1.height = '160cm',
 console.log(allUsers);
@@ -114,7 +114,7 @@ console.log(users[1].hasOwnProperty('height'));                //Output : true
 //Object Destructuring
 
 const {user1Name} = user1;
-console.log(user1Name);                 //Output : undefined. because, we can only destrucure an object key-value based upon their key-name only at starging point. But, after that we can chage it's name.
+console.log(user1Name);                 //Output : undefined. because, we can only destrucure an object key-value based upon their key-name only at starting point. But, after that we can chage it's name.
 
 const {name : userName} = user1;
 console.log(userName);                                  //Output : Vikram Kumar

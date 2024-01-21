@@ -95,9 +95,9 @@ getMarks(studentMarks);
  * Lexical Scope :- The variable which is declared into curly braces called the variable is in Lexical Scope.
  */
 
+//Scope exist because of the data type of Varibales.
 //Note :- Lexical scope can use the Global scope values but Global scope can't do the same. {also allow in Nested Funtion}.
 //Node's global scope is different from browser's Global scope.
-//Scope exist because of the data type of Varibales.
 //We should not use Var keyword to declare a variable. If it is necessary then we can but otherwise we should simply ignore it.
 //Execution of code happens line-by-line.
 
@@ -117,7 +117,7 @@ console.log(this);
  */
 
 const printName = function(name){
-    console.log(this.name);                 //Output : undefined
+    console.log(this.name);                 //Output : blank. Because, we didn't pass any object into the function as an argument so that's why this dosen't refeer to anyone. The name parameter is a different thing it is just like a variable name not an object.
     console.log(this);
     return 0;
 }
@@ -163,7 +163,6 @@ console.log(returnUserName().name);             //Output : Laxman Krishnamurti
 
 //like implicit return
 
-
 //Named IIFE
 (function printName1(){
     console.log('Hello world');
@@ -177,7 +176,7 @@ console.log(returnUserName().name);             //Output : Laxman Krishnamurti
 /******************************************************************************************************************* */
 
 /**
- * Execution Context in JavaScript :- Execution context means how code is executed in JavaScript. There are two Execution context in JavaScipt.
+ * Execution Context in JavaScript :- Execution context means how the code is going to be execute in JavaScript. There are two Execution context in JavaScipt.
  * (1). Global Execution Context
  * (2). Functional Execution Context :- Function creates the execution context
  * 
@@ -185,7 +184,7 @@ console.log(returnUserName().name);             //Output : Laxman Krishnamurti
  * (1). Memory creation phase
  * (2). Code Execution Phase
  * 
- * Global Execution context refers to this.
+ * Global Execution context refers to "this".
  * 
- * After functional Execution context, function returns it's value to the global executional context. After that the Execution context will be deleted.
+ * After functional Execution context, function returns it's value to the global executional context. After that the function Execution context will be deleted.
  */

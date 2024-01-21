@@ -125,7 +125,7 @@ let value4;
 value4 = 15 ?? 18 ?? 19;
 console.log(value4);            //Output : 15
 
-
+//NCO is basically used for avoiding falsy values to showing on frontend.
 //Note :- Nullish coalesing operator is different from Ternary operator.
 //Ternary Operator is used like as a single-line if-else statement
 
