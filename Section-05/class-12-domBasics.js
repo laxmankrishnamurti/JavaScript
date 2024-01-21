@@ -92,7 +92,7 @@ const rust = document.querySelector('li:nth-child(7)');
 console.log(rust.textContent);          //just for checking
 rust.remove();                         //Deletion successful.
 
-/*************************************************************************** Child to Parent Element and Parent to child  ************************************************************/
+/****************************** Child to Parent Element and Parent to child  **********************************************/
 
 const getParent = document.querySelector('#lang-name')
 // console.log(getParent);                  //just for checking
@@ -163,7 +163,7 @@ console.log(firstChild.innerHTML);                  //Output : JavaScript
 const nextSibling = firstChild.nextElementSibling;
 console.log(nextSibling.innerHTML);                 //Output : C
 
-/***************************************************************************** Recap *********************************************************************************/
+/***************************************************************************** Recap ****************************************/
 
 /**
  * (1) Find Parent Element
