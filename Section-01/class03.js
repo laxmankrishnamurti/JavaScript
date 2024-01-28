@@ -11,6 +11,28 @@
  * Non-Primitive data types :- Array, Objects, Functions
  */
 
+//let's check the type of all Non-Primitive data type.
+
+const marks = [95,91,89,88,85,78];      //is an Array
+console.log(`type of array is :: ${typeof(marks)}`);             //Output : type of array is :: object
+
+const userDetails = {               //is an object
+    name : 'Laxman Krishnamurti',
+    age : 21, 
+    email : 'freelancing.laxman@gmail.com',
+    isloggedIn : false
+}
+
+console.log(`type of object is ::${typeof(userDetails)}`);      //Output : type of object is :: object
+
+const sayHello = (user) => {
+    console.log(`Hello ${user.name}`);
+}
+sayHello(userDetails);      //Output :: Hello Laxman Krishnamurti
+console.log(`type of function is :: ${typeof(sayHello)}`);
+
+//Output : type of function is :: function
+
 /**
  * Strings in JavaScript ::
  * 
@@ -57,7 +79,7 @@ const searchLink = "https://www.google.com/";
 console.log(searchLink.replace('google', 'laxman'));        //Output : https://www.laxman.com/
 console.log(searchLink.includes('laxman'));                 //Output : false {because we did not change the actual variable value.}
 
-//include returns booleans value.
+//include returns boolean values.
 
 //Split a string into an Array
 
