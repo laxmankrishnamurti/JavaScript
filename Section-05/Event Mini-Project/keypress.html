@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Key Finder</title>
     <link rel="stylesheet" href="keypress.css">
-    <script src="keypress.js"></script>
+    <script src="keypress.js" defer></script>
 </head>
 <body>
     <div id="container">
-        <h1>Key Finder</h1>
-        <div id="input-container">
-            <div id="input">
-                <label for="pressKey">Press any key : <input type="text" id="pressKey"></label>
-                <div id="result-container">
-                    <span>You Pressed :: </span>
-                    <p id="display"></p>
-                </div>
-            </div>
+        <h1 id="main-heading">Key Finder</h1>
+        <hr>
+        <div class="key">
+            <label for="input">Press any key : <input type="text" id="input"></label>
+            <input type="text" id="display">
         </div>
     </div>
 </body>
