@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    /* transition: all 3s ease-in; */
+}
+
+#contianer {
+    width: 80vw;
+    height: 50vh;
+    border: 1px solid black;
+    padding: 1rem;
+    /* font-size: 100px;     Just checking em functionality based on the font-size of the container */
+    margin: 1rem auto;
+    background-color: rgb(129, 127, 127);
+}
+
+.child {
+    width: 100%;
+    height: 9%;
+    margin: 3px 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
