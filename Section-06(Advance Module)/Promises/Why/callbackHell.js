@@ -56,7 +56,7 @@ function changeText(element, text, color, time, onSuccess, onFailure){
 //                             changeText(eight, 'Eight', 'white', 2000, () => {
 //                                 changeText(nine, 'Nine', 'white', 1000, () => {
 //                                     changeText(ten, 'Ten', 'white', 2000, () => {
-//     // PYRAMID OF HELL....................................................................
+// PYRAMID OF DOM || CALLBACK HELL....................................................................
 //                                     }, () => {console.log(`Input element dosen't exist`)})
 //                                 }, () => {console.log(`Input element dosen't exist`)})
 //                             }, () => {console.log(`Input element dosen't exist`)})
