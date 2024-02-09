@@ -26,6 +26,18 @@ Because, Node.JS, Deno...etc, is just a Run-time enviroment. They don't provide 
 
 Note :: But, In Arrow function the "this" keyword works differently. So, with that we have to understand about the Arrow function and it's limitation in the arrow function.
 
+<pre>
+    The this keyword refers to different objects depending on how it is used:
+    
+    - In an object method, this refers to the object.
+    - Alone, this refers to the global object.
+    - In a function, this refers to the global object.
+    - In a function, in strict mode, this is undefined.
+    - In an event, this refers to the element that received the event.
+    - Methods like call(), apply(), and bind() can refer this to any object.
+
+</pre>
+
 # why we use "Arrow function"?
 
 Arrow function {()=>} is concise way of writing JavaScript functions in shorter way. Arrow functions were introduced in the ES6 version. They make our code more structured and readable.
