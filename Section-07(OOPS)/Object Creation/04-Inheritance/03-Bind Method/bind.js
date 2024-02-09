@@ -27,7 +27,7 @@ class React{
         this.React = 'React',
         this.server = 'https://localhost:3000'
 
-        btn.addEventListener('click', this.handle.bind(this))
+        btn.addEventListener('click', this.handle.bind(this));
     }
 
     handle(){
@@ -37,3 +37,5 @@ class React{
 }
 
 const App = new React();
+
+//To be more precise we can say that "bind" is a carry bag which carry "this" keyword from one context to another context.
