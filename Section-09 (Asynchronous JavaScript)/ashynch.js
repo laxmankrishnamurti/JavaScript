@@ -2,7 +2,7 @@ const title = document.getElementById('main-heading');
 const body = document.querySelector('body');
 
 function changeText() {
-    title.innerText = 'Asynchronous JavaScript'
+    // title.innerText = 'Asynchronous JavaScript'
 }
 
 const change = setTimeout(changeText, 2000);
@@ -48,11 +48,6 @@ request.open('GET', url);
 request.send();
 let user = {};
 
-//Extract the user using function.
-
-const userInfo = function (user) {
-    return 'hello';
-}
 
 //Traking The Request continuously.
 
@@ -79,6 +74,12 @@ request.onreadystatechange = function () {
     }
 }
 
+//Extract the user using function.
 
+const userInfo = function (user) {
+    myName(user.name, user.location, user.bio, user.followers);
+}
 
-console.log(userInfo());
+function myName(name, location, bio, followers) {
+    console.table(name, location, bio, followers);
+}
