@@ -83,3 +83,91 @@ const userInfo = function (user) {
 function myName(name, location, bio, followers) {
     console.table(name, location, bio, followers);
 }
+
+//PENDING :- Can we extract the "user" like a Global Object from the XHR Request?
+
+/**************************************************************************************************************************/
+
+//PROMISES
+
+const container = document.getElementById('container');
+
+const changeColor = function () {
+    return new Promise((resolve, reject) => {
+        let userStatus = true;
+        if (userStatus) {
+            setTimeout(() => {
+                container.style.backgroundColor = 'red';
+                resolve();
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                reject('Err : Something went wrong!!!');
+            }, 1000)
+        }
+    })
+}
+changeColor()
+    .then(() => {
+        console.log('Background-color changed successfully')
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+
+//Let's divide the task into multiple promises.
+
+const extraStyle = function () {
+    return new Promise((resolve, reject) => {
+        let userStatus = true;
+        if (userStatus) {
+            setTimeout(() => {
+                container.style.borderRadius = '0.5rem';
+                container.style.transition = 'all 1s ease';
+                resolve();
+            }, 2000);
+        } else {
+            setTimeout(() => {
+                reject('Err : Something went wrong!!!');
+            }, 2000)
+        }
+    })
+}
+
+extraStyle()
+
+    .then(() => {
+        console.log('Border-Radius and Transition completed.');
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+const translate = function () {
+    return new Promise((resolve, reject) => {
+        let userStatus = true;
+        if (userStatus) {
+            setTimeout(() => {
+                container.style.translate = '100px'
+                container.style.scale = '1.5';
+                resolve();
+            }, 5000);
+        } else {
+            setTimeout(() => {
+                reject('Err : Something went wrong!!!');
+            }, 3000)
+        }
+    })
+}
+
+translate()
+
+    .then(() => {
+        console.log('Translate and Scale Completed.');
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+/****************************************************************************************************************************/
