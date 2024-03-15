@@ -1,9 +1,9 @@
 /**
- * What is APT?
+ * What is API?
  * 
- * ans :- API is just a talking system between two system which can be written in different-different language.
+ * ans :- An API(Application program interface) is just a way of communication between two system which can be written in different-different language.
  * 
- * Before using "fetch" method we used XMLHTTPREQUEST to get the data from the API or from the Database. The "XMLHttpRequest.readyState" property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states.
+ * Before using "fetch" method we used "XMLHTTPREQUEST" to get the data from backend. The "XMLHttpRequest.readyState" property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states.
  * 
  *          Value           State                   Description
  *            0             UNSENT                  Client has been created. open() not called yet.
@@ -22,7 +22,7 @@
  * 
  * What is Built-in-Object?
  * 
- * ans :- Built-in-object means Global Objects. It refers to object in the Global scope. It has lots of catefories like:- Value Property, Function Property, Fundamental Object, Error Object, Number and Date, Indexed Collection.....etc
+ * ans :- Built-in-object means Global Objects. It refers to object in the Global scope. It has multiple division like:- Value Property, Function Property, Fundamental Object, Error Object, Number and Date, Indexed Collection.....etc
  */
 
 /**
@@ -50,10 +50,10 @@ const follow = document.querySelector('#following');
 
 const requestURL = 'https://api.github.com/users/laxmankrishnamurti';
 const xhr = new XMLHttpRequest();
-xhr.open('GET', requestURL);
-xhr.send();
-xhr.onreadystatechange = function() {
-    if(xhr.readyState === 4){
+xhr.open('GET', requestURL);        //GET :: Requesting method,   requesURL :: From where the data comes.
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        // console.log(this.responseText);
         const data = JSON.parse(this.responseText);
         console.log(data);
         let username = data.login;
@@ -68,4 +68,27 @@ xhr.onreadystatechange = function() {
     }
 }
 
-// I can't extract the data outside the if-block. 
+xhr.send();
+// I can't extract the data outside from if-block. 
+
+
+// MDN Example of the XHRRequest 
+
+// const xhr = new XMLHttpRequest();
+// const method = "GET";
+// const url = "https://developer.mozilla.org/";
+
+// xhr.open(method, url, true);
+// xhr.onreadystatechange = () => {
+//   // In local files, status is 0 upon success in Mozilla Firefox
+//   if (xhr.readyState === XMLHttpRequest.DONE) {
+//     const status = xhr.status;
+//     if (status === 0 || (status >= 200 && status < 400)) {
+//       // The request has been completed successfully
+//       console.log(xhr.responseText);
+//     } else {
+//       // Oh no! There has been an error with the request!
+//     }
+//   }
+// };
+// xhr.send();
