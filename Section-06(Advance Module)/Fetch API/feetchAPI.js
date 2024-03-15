@@ -1,20 +1,20 @@
-//fetch API is very important when we talk about Asynchronous programming. Fetching means we receive something from the given API. We can say that "fetch api" is successor to "XMLHttpRequest". It is a "Network based Request" and it returns a "Promise" when the response is available.
+//fetch API is very important when we talk about Asynchronous programming. Fetching means we receive something from backend with the help of the API, which works as a bridge between frontend and backend. We can say that "fetch api" is a successor of "XMLHttpRequest". It is a "Network based Request" and it returns a "Promise" when the response is available.
 
-//A fetch promise only rejects when a network is encountered(when there is a permission issue or similar). A fetch Promise dosen't reject on HTTP errors(404, eetc).
+//A fetch promise only rejects when a network is encountered(when there is a permission issue or similar). A fetch Promise dosen't reject on HTTP errors(404, etc).
 
 
 fetch('https://api.github.com/users/laxmankrishnamurti')
-.then((response) => {
-    console.log(response);
-    return response.json();
-})
-.then((data) => {
-    console.log(username);
-    console.log(data);
-})
-.catch((error) => {
-    console.log(error);
-})
+    .then((response) => {
+        console.log(response);
+        return response.json();
+    })
+    .then((data) => {
+        console.log(username);
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
 
 /**
  * Response {type: 'cors', url: 'https://api.github.com/users/laxmankrishnamurti', redirected: false, status: 200, ok: true, …}
