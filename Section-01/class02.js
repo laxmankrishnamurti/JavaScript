@@ -5,8 +5,8 @@ console.log(typeof age);        // {typeof} is used to check type of the variabl
 
 //Output : number
 
-let ageInString = String(age);          //{String} is a class, Used for conversion of data-types.
-console.log(ageInString);   
+let ageInString = String(age);          //{String} is a pre-written functions(library), Used for conversion of data-types.
+console.log(ageInString);
 console.log(typeof ageInString);
 
 /**
@@ -23,7 +23,9 @@ console.log(ageInNumber);       //Output : NaN(Not a Number) but,
 console.log(typeof ageInNumber);    //Output : number      
 
 /**
- * Note : It means if we converted a string into number that dosen't mean that we actually going to got a number. This create problems while writing Backend.
+ * Note : It means if we converted a string into number that dosen't mean that we actually going to getting a number. This create problems while writing Logic(Backend). To make sure that the number we have gotten is actually a number, write logic for it in Backend. So that the value is proper a number not anything else because if don't set a type checking then we are going to store a wrong data in our Database.
+ * 
+ * Here comes "TypeScript" the reason behind creating "TypeScript" is basically Type checking in JavaScript. 
  */
 
 //Let's practice the same concept on "null" and "undefined"
@@ -111,7 +113,7 @@ console.log(null >= undefined);             //Output : false
 console.log(null == undefined);            //Output : true
 
 /**
- * Note :: When we define a variable to "undefined" then we are trying to convey that the variable does not exist. When we define a variable to "null" then we are trying to convey that the variable is empty.
+ * Note :: When we define a variable to "undefined" then we are trying to convey that the variable exist but the initialized value of the varibale is "undefined", this is not equal as the variable value which have null value. When we define a variable to "null" then we are trying to convey that the variable is empty.
  */
 
 //Leet's check is null is 0 or something else.
@@ -127,5 +129,5 @@ console.log(null <= 0);            //Output : true
 console.log(null >= 0);            //Output : true
 
 /**
- * Note :- This happens because the equality check(==,===) and comparisons (>,<,<=,>=) work differenty. Comparison convert null into a numebr, treating it as 0.
+ * Note :- This happens because the equality check(==,===) and comparisons checks(>,<,<=,>=) are work differenty. Comparison convert null into a numebr, treating it as 0.
  */
