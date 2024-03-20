@@ -52,12 +52,12 @@ console.log(age);                       //It wil not generate exactly 0 or 1.
 let age1 = Math.random() * 10;
 console.log(age1);                  //Range : { 0 to 10 }
 age1 = ((Math.random() * 10) + 1);       //we have added 1 because of avoiding {0.012454} these type of numbers
-console.log(age1);          //Range : { 1 - 10 or 10+ }
+console.log(age1);          //Range : { 1 - 10 or 10+ } OR (Range start from 1 to 11(less then 11))
 
 console.log(Math.ceil(age1));           //for getting highest age {Range : 2 - 11} because 1.2122 is directly goes upto 2 not 1.
-console.log(Math.floor(age1));         //for getting lowest age {Range : 1 - 10} because 1.9822 is directly goes to 1 not 2 because floor choose lowest newarest value.
+console.log(Math.floor(age1));         //for getting lowest age {Range : 1 - 10} because 1.9822 is directly goes to 1 not 2 because floor choose lowest nearest value.
 
-//Let's try to gettings a random number between our Range.
+//Let's try to get a random number between our Range.
 
 let minRange = 20;
 let maxRange = 25;

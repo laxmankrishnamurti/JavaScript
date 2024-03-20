@@ -25,7 +25,7 @@ console.log(isoDate === jsonDate);                  //Output : true
 console.log(todayStatus.toLocaleString());             //Output : 10/01/2024, 11:15:50
 console.log(todayStatus.toLocaleDateString());          //Output : 10/01/2024
 
-let myDate = new Date(2024,1,4);                    //(format : yy/mm/dd)
+let myDate = new Date(2024, 1, 4);                    //(format : yy/mm/dd)
 console.log(myDate.toDateString());                 //Output : Sun Feb 04 2024
 console.log(myDate.toLocaleString());              //Output : 04/02/2024, 00:00:00
 
@@ -49,7 +49,7 @@ console.log(paymentTimeStamp);              //Output : 17,04,86,69,12,876
 
 //Date.now() :- calculate milisecond vlaue from Jan 1 1970.
 
-let debitTime = new Date(2024,1,4);
+let debitTime = new Date(2024, 1, 4);
 console.log(debitTime);            //Output : Sun Feb 04 2024 00:00:00 GMT+0530 (India Standard Time)
 //get Time stamp of debit
 let fetchDebitTime = (debitTime.getTime());           //Output : 1706985000000
@@ -69,6 +69,20 @@ console.log(creditTime.getDate());                  //Output : 10
 console.log(creditTime.getDay());                  //Output : 3
 console.log(creditTime.getFullYear());             //Output : 2024
 
+let hour = creditTime.getHours()
+console.log(hour)
+
 /**
  * More methods like :- getHours(), getMiliSeconds(), getSecond(), getMinutes()......etc
  */
+
+let present = new Date()
+console.log(present.getHours())
+console.log(present.getMinutes())
+console.log(present.getSeconds())
+
+
+let after1minute = new Date()
+console.log(after1minute.getHours())
+console.log(after1minute.getMinutes())
+console.log(after1minute.getMinutes())
