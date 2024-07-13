@@ -1,4 +1,1 @@
-# JavaScript
-This is JavaScript Revision files
-
-Functional JavaScript
+# Learn How to use JavaScript Effectively
