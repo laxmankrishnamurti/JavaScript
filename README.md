@@ -1,1 +1,1 @@
-# Learn How to use JavaScript Effectively
+# How we can use JavaScript Effectively 
