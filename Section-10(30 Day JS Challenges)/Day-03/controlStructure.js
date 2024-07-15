@@ -92,29 +92,30 @@ getWeekStatus(5);
 //Task - 05
 
 function getStudentGrade(num) {
-  switch (num) {
-    case 95:
-      console.log("A");
-      break;
-    case 90:
-      console.log("B");
-      break;
-    case 85:
-      console.log("C");
-      break;
-    case 80:
-      console.log("D");
-      break;
-    case 75:
-      console.log("E");
-      break;
+  switch (true) {
+    case num >= 95:
+      return "A";
+    case num >= 90:
+      return "B";
+    case num >= 85:
+      return "C";
+    case num >= 80:
+      return "D";
+    case num >= 75:
+      return "E";
+    case num >= 50:
+      return "F";
+    case num > 0:
+      return "Fail";
 
     default:
       console.log("Enter a valid marks");
   }
 }
 
-getStudentGrade(85);
+console.log("line no 112  :: ", getStudentGrade(96));
+console.log("line no 113  :: ", getStudentGrade(15));
+console.log("line no 114  :: ", getStudentGrade(75));
 
 /**
  * Activity - 04
@@ -150,9 +151,11 @@ function checkByGreaterDivisor(year) {
 
 function checkLeapYear(year) {
   let bigCheck = null;
+
   if (year > 100) {
     bigCheck = checkByGreaterDivisor(year);
   }
+
   if (year % 4 === 0 && bigCheck) {
     console.log(`${year} is a leap year`);
   } else {
