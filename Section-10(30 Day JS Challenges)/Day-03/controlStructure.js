@@ -31,6 +31,10 @@ function isEligibleForVoting(age) {
 isEligibleForVoting(21);
 isEligibleForVoting(12);
 
+/**
+ * Activity - 02
+ */
+
 //Task - 03
 
 function getLargestNumber(num1, num2, num3) {
@@ -48,6 +52,10 @@ function getLargestNumber(num1, num2, num3) {
 }
 
 console.log("Largest number is : ", getLargestNumber(10, 31, 25));
+
+/**
+ * Activity - 03
+ */
 
 //Task - 04
 
@@ -108,6 +116,10 @@ function getStudentGrade(num) {
 
 getStudentGrade(85);
 
+/**
+ * Activity - 04
+ */
+
 //Task - 06
 
 function getEvenOrOdd(num) {
@@ -121,6 +133,10 @@ if (result) {
 } else {
   console.log("Odd number");
 }
+
+/**
+ * Activity - 05
+ */
 
 //Task - 07
 
