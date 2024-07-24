@@ -205,7 +205,7 @@ async function getPromise(promise) {
 
 const promiseFour = new Promise((resolve, reject) => {
   try {
-    setTimdfeout(() => {
+    setTimeout(() => {
       resolve("promise resolve : true");
     }, 2000);
   } catch (error) {
@@ -213,4 +213,137 @@ const promiseFour = new Promise((resolve, reject) => {
   }
 });
 
-getPromise(promiseFour);
+// getPromise(promiseFour);
+
+/**
+ * Activity - 04
+ */
+
+//Task - 06
+
+const promiseFive = new Promise(async (resolve, reject) => {
+  try {
+    let response = await fetch("http://localhost:3000/users/4");
+    if (response.status === 200) {
+      let userdata = await response.json();
+      resolve(userdata);
+    }
+  } catch (error) {
+    reject("Promise rejected");
+  }
+});
+
+// promiseFive
+//   .then((data) => {
+//     console.log("fetched data :", data);
+//   })
+//   .catch((error) => {
+//     // console.error("Promise rejected  : ", error);
+//     throw error;
+//   });
+
+//Task - 07
+
+async function getUserData() {
+  try {
+    let response = await fetch("http://localhost:3000/users");
+    if (response.status === 200) {
+      let allUserData = await response.json();
+      console.log("All userdata : ", allUserData);
+    }
+  } catch (error) {
+    throw error;
+  }
+}
+
+// getUserData();
+
+/**
+ * Activity - 05
+ */
+
+//Task - 08
+
+const waitPromiseOne = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseOne resolved");
+    }, 1000);
+  } catch (error) {
+    reject("waitPromiseOne rejected");
+  }
+});
+
+const waitPromiseTwo = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseTwo resolved");
+    }, 2000);
+  } catch (error) {
+    reject("waitPromiseTwo rejected");
+  }
+});
+
+const waitPromiseThree = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseThree resolved");
+    }, 3000);
+  } catch (error) {
+    reject("waitPromiseThree rejected");
+  }
+});
+
+async function logAllPromises(promises) {
+  try {
+    let resolvedValue = await Promise.all(promises);
+    console.log("all Resolved value : ", resolvedValue);
+  } catch (error) {
+    console.log("all Rejected value : ", error);
+  }
+}
+
+// logAllPromises([waitPromiseOne, waitPromiseTwo, waitPromiseThree]);
+
+//Task - 09
+
+const waitPromiseFour = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseFour resolved");
+    }, 4000);
+  } catch (error) {
+    reject("waitPromiseFour rejected");
+  }
+});
+
+const waitPromiseFive = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseFive resolved");
+    }, 3000);
+  } catch (error) {
+    reject("waitPromiseFive rejected");
+  }
+});
+
+const waitPromiseSix = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => {
+      resolve("waitPromiseSix resolved");
+    }, 6000);
+  } catch (error) {
+    reject("waitPromiseSix rejected");
+  }
+});
+
+async function logAllPromises(promises) {
+  try {
+    let resolvedValue = await Promise.race(promises);
+    console.log("all Resolved value : ", resolvedValue);
+  } catch (error) {
+    console.log("all Rejected value : ", error);
+  }
+}
+
+logAllPromises([waitPromiseFour, waitPromiseFive, waitPromiseSix]);
