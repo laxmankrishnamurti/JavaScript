@@ -68,4 +68,22 @@ console.log(getMinValue);                                                       
 const getMaxValue = ((Math.floor(((Math.random() * (maxRange - minRange)) + 1) + maxRange)));       //Range : {26-30}
 console.log(getMaxValue);
 const getMaxValue1 = ((Math.ceil(((Math.random() * (maxRange - minRange)) + 1) + maxRange)));      //Range : {27-31}
-console.log(getMaxValue1);                                                      
+console.log(getMaxValue1);
+
+
+//Create a program that generate a alphanumeric number like a usename
+
+const generateRandomUsename = () => {
+    let sourceString = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+    let randomUsername = '';
+    for (let i = 0; i < 15; i++) {
+        let randomStringIndex = Math.floor(Math.random() * sourceString.length)
+        randomUsername += sourceString.charAt(randomStringIndex)
+    }
+
+    return randomUsername;
+}
+
+let randomUsername = generateRandomUsename()
+console.log('Generated username is : ', randomUsername)

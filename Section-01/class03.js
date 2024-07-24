@@ -83,7 +83,10 @@ console.log(myName1.length);                    //13
 
 const searchLink = "https://www.google.com/";
 console.log(searchLink.replace('google', 'laxman'));        //Output : https://www.laxman.com/
-console.log(searchLink.includes('laxman'));                 //Output : false {because we did not change the actual variable value.}
+console.log(searchLink.includes('laxman'));                //Output : false {because we did not change the actual variable value.}
+
+console.log(searchLink.includes('laxmankrishnamurti'))      //output : flase
+console.log(searchLink.includes('https'))                   //output : true
 
 //include always returns a boolean value.
 

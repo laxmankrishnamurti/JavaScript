@@ -1,8 +1,31 @@
+//Here is a detail description about how variables, arrays, objects, functions and all these stuffs are stored in a memory?
+
+/**
+ * When we declare a variable like this :-
+ * 
+ *      let age = 10;
+ * 
+ * Here, let = Data-type, age = Variable name; and 10 is the actual value of the age variable.
+ * 
+ * Let's deep-dive into it. We are going to disscuss about how computer trates all of these things. 
+ * 
+ * Here let is a data type that needs to define because of computer can understand how we are actually trying to store in the memory. It is very important. I hope this is clear. Let's go further........
+ * 
+ * Here the age is just an reference variable that is actually stored in the stack memory. First of all let's learn about what are the type of memeories in a computer?
+ * 
+ * So, in terms of memory there are lots of memeory/storage type in a computer(in smaller level) but when we speaking into broader picture then it is going to divided into two different parts. These are :-
+ * 
+ * (1) STACK MEMORY ( Structured order )        (2) HEAP MEMORY ( Unstructured order)
+ * 
+ * So, the age is going to be stored in STACK MEMORY and the 10 is going to store in the HEAP MEMORY. Hence, the reference variable(age) that is stored into STACK MEMORY is pointing toward the HEAP MEMORY where the actual value is stored. 
+ */
+
+
 /**
  * Arrray :- Arrray is just like a variable which can store multiple values which data type may be same or different. Array is a Non-primitive data type so it is stored in the Heap memory so that's why any other array can get the direct reference point of that reffered array.
  */
 
-const naturalNumber = [1,2,3,4,5,6,7,8,9];
+const naturalNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(naturalNumber.length);              //Output : 9 (array's length)
 
 //access by indexing.
@@ -18,14 +41,14 @@ console.log(userDetails[2]);                    //Output : freelancing.laxman@gm
 
 //Ideally array is used when we have to store the same data type values.
 
-const studentsMarks = [85,55,95,56,66,98,78];
+const studentsMarks = [85, 55, 95, 56, 66, 98, 78];
 //Manupulation of arrray's elements
 studentsMarks[1] = 78;
 console.log(studentsMarks);                 //Output : (7) [85, 78, 95, 56, 66, 98, 78]
 
 //Different way to declare an Array.
 
-const height = new Array(160,145,150,170,190,210);          //All values in CentiMeter.
+const height = new Array(160, 145, 150, 170, 190, 210);          //All values in CentiMeter.
 console.log(height[3]);                                     //Output : 170
 
 const populatedCountry = ['India', 'China', 'Russia', 'Iran', 'Pakistan'];
@@ -37,7 +60,7 @@ console.log(populatedCountry.includes('India'));        //Output : true
 populatedCountry.push('US');
 console.log(populatedCountry.includes('US'));           //Output : true
 //Remove array's elements from the last
-const removedCountry = populatedCountry.pop();        
+const removedCountry = populatedCountry.pop();
 console.log(removedCountry);                           //Output : US
 //Add another country from the begining
 populatedCountry.unshift('US');
@@ -69,7 +92,7 @@ console.log(populatedCountry);                  //Output : (5) ['India', 'China
  * Splice() :- It also returns a section of an array but it cahnges the Original array.
  */
 
-const getSection1 = populatedCountry.splice(0,2);
+const getSection1 = populatedCountry.splice(0, 2);
 console.log(getSection);                                    //Output : (2) ['India', 'China']
 console.log(populatedCountry);                             //Output : (3) ['Russia', 'Iran', 'Pakistan']
 
@@ -94,7 +117,7 @@ console.log(world);             //Output : (8) ['India', 'China', 'Pakistan', '
 //get a Linear array form nested array.
 
 const sports = ['Chess', 'Badminton', ['Cricket', 'Tenis'], 'Football', ['TableTenis', 'Bauli-ball', ['Casino', 'Gaulf']]];
-console.log(sports);                    
+console.log(sports);
 
 //Output : (5) ['Chess', 'Badminton', Array(2), 'Football', Array(3)]
 
@@ -130,10 +153,10 @@ console.log(myArr);
  * Output : ['L', 'a', 'x', 'm', 'a', 'n', ' ', 'K', 'r', 'i', 's', 'h', 'n', 'a', 'm', 'u', 'r', 't', 'i']
  */
 
-let numbers = [1,2,3,4,5,6,7,8,9,10];
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let returnEven = (num) => {
-    if(typeof(num) === 'number'){
-        if(num % 2 == 0){
+    if (typeof (num) === 'number') {
+        if (num % 2 == 0) {
             return num;
         }
     }
@@ -152,5 +175,5 @@ console.log(getNum);
  * Output : [1, 2, 3, 4, 5, 6, 7, 8, 9]
  */
 
-console.log(typeof(getNum));        //Output : object
-console.log(typeof(getNum[1]));     //Output : number
+console.log(typeof (getNum));        //Output : object
+console.log(typeof (getNum[1]));     //Output : number
