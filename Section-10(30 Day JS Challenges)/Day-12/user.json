@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Laxman Krishnamurti",
+      "email": "laxmankrishnamurti@gmal.com"
+    },
+    {
+      "id": 2,
+      "username": "Harshad Mehta",
+      "email": "harshadmehta@gmal.com"
+    },
+    {
+      "id": 3,
+      "username": "Sonu Kumar",
+      "email": "sonukumar@gmal.com"
+    }
+  ]
+}
