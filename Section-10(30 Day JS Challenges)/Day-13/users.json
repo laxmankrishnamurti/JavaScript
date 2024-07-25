@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "_id": 1,
+      "username": "Laxman Krishnamurt",
+      "age": 21,
+      "gender": "male",
+      "email": "laxmankrishnamurti@gmail.com",
+      "country": "Bharat",
+      "salary": "$75450"
+    },
+    {
+      "_id": 2,
+      "username": "Kawya Krishnamurt",
+      "age": 6,
+      "gender": "female",
+      "email": "kawyakrishnamurti@gmail.com",
+      "country": "Bharat",
+      "salary": "$7545"
+    },
+    {
+      "_id": 3,
+      "username": "Anglina",
+      "age": 28,
+      "gender": "female",
+      "email": "anglina@gmail.com",
+      "country": "Germany",
+      "salary": "$17545"
+    },
+    {
+      "_id": 4,
+      "username": "Maksud Alam",
+      "age": 25,
+      "gender": "male",
+      "email": "maksudalam@gmail.com",
+      "country": "Pakistan",
+      "salary": "$75451"
+    },
+    {
+      "_id": 5,
+      "username": "Vikram Dhanush",
+      "age": 14,
+      "gender": "male",
+      "email": "vikramdhanush@gmail.com",
+      "country": "Bharat",
+      "salary": "$70545"
+    },
+    {
+      "_id": 6,
+      "username": "Lucy",
+      "age": 24,
+      "gender": "female",
+      "email": "lucy@gmail.com",
+      "country": "China",
+      "salary": "$7545"
+    },
+    {
+      "_id": 7,
+      "username": "Sammie Lie",
+      "age": 26,
+      "gender": "male",
+      "email": "sammielie@gmail.com",
+      "country": "China",
+      "salary": "$75458"
+    }
+  ]
+}

@@ -235,3 +235,20 @@ const totalSalaryByGender = _.map(groupByGender, (grp) =>
 );
 
 console.log("totalSalaryByGender :: ", totalSalaryByGender);
+
+//Task - 07
+
+import axios from "axios";
+
+async function getAllUsers() {
+  const { data } = await axios.get("http://localhost:3000/users");
+  console.log("All users data :: ", data);
+}
+
+getAllUsers(); //Output : All users data ::  (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {_id: 1, username: 'Laxman Krishnamurt', age: 21, gender: 'male', email: 'laxmankrishnamurti@gmail.com', …}1: {_id: 2, username: 'Kawya Krishnamurt', age: 6, gender: 'female', email: 'kawyakrishnamurti@gmail.com', …}2: {_id: 3, username: 'Anglina', age: 28, gender: 'female', email: 'anglina@gmail.com', …}3: {_id: 4, username: 'Maksud Alam', age: 25, gender: 'male', email: 'maksudalam@gmail.com', …}4: {_id: 5, username: 'Vikram Dhanush', age: 14, gender: 'male', email: 'vikramdhanush@gmail.com', …}5: {_id: 6, username: 'Lucy', age: 24, gender: 'female', email: 'lucy@gmail.com', …}6: {_id: 7, username: 'Sammie Lie', age: 26, gender: 'male', email: 'sammielie@gmail.com', …}length: 7[[Prototype]]: Array(0)
+
+/**
+ * Activity - 05
+ */
+
+//Task - 08
