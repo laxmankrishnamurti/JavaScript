@@ -174,7 +174,7 @@ manager.getAllItems();
  * Avtivit - 05
  */
 
-//Task - 07
+//Task - 07 & 08
 
 function memoize(fun) {
   let cache = {};
