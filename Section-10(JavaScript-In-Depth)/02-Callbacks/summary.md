@@ -25,7 +25,7 @@ And also keep in mind which function enters first will unwind last. (First come 
 
 ## What's wrong with callbacks?
 
-Callbacks are good for Synchronous task but it is not good for Asynchronous Task. Here it will become burden to manage and starts creating problems like :- Nested Callbacks which is well-known as "Callback Hell or Pyramid of dom".
+Callbacks are good for Synchronous task but it is not good for Asynchronous Task. Here it will become burden to manage and starts creating problems like :- Nested Callbacks which is well-known as "Callback Hell or Pyramid of doom".
 
 #### Interesting Concept :: Let's play with callbacks
 
@@ -40,7 +40,7 @@ function getData(a, cb) {
 getData(1, getData(10, getData(20))); // Output : 20,10,1 (Will all be printed on console after 2 second)
 ```
 
-## Pyramid of DOM OR Callback Hell.
+## Pyramid of DOOM OR Callback Hell.
 
 ```js
 function fetchApi(args, cb) {
