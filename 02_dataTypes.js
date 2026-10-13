@@ -53,5 +53,20 @@ console.log(typeof null)            // object
 
 let arr1 = ["first"];
 arr1[0] = "second";
-
 console.log(`arr1: ${arr1}`);
+
+const arr2 = ["First"];
+arr2[0] = "Second";
+console.log(`arr2 : ${arr2}`);
+console.log(`arr2 0th Index: ${arr2[0]}`);
+
+const arr3 = ["one", "second", "third"];
+console.log(`arr3: ${arr3}`);
+
+//arr3 = ["4", "5", "6"];       
+//console.log(`arr3: ${arr3}`);      // TypeError: Assignment to constant variable.      
+
+arr3[0] = "4";
+arr3[1] = "5";
+arr3[2] = "6";
+console.log(`arr3: ${arr3}`);
