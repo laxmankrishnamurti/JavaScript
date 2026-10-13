@@ -49,3 +49,9 @@ console.log(typeof null)            // object
  *          - Set
  *          - Map
  */
+
+
+let arr1 = ["first"];
+arr1[0] = "second";
+
+console.log(`arr1: ${arr1}`);

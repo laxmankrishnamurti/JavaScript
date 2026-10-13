@@ -39,3 +39,4 @@ function tradeExecutor(tickerName, tickerQuantity, tickerPrice, tickerRequiredMo
 console.log(typeof(segmentList));
 console.log(typeof(userDetails));
 console.log(typeof(tradeExecutor));
+
