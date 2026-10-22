@@ -49,5 +49,17 @@ console.log(`subtracted: ${subtractTwo(100, 50)}`);
 const returnObject = () => ({username: "Hindenburg"});
 console.log("returned Object:", returnObject());
 
-// IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
+// IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE): used to prevent function from global scope variables
+
+(function connectDB(){      // named IIFE
+    console.log("DB Connected successfully!")
+})(); // ; used to terminate its scope
+
+(() => {    // annonymus IIFE
+    console.log("Radis Connected Successfully!")
+})();
+
+((username) => {
+    console.log(`Hello ${username}!`)
+})(user.username);
 
