@@ -85,3 +85,24 @@ if(Object.keys(userObj).length > 0){
 }else{
     // then, do this
 }
+
+
+// NULLISH COALESCING OPERATOR (??): null undefined
+
+let response;
+response = 5 ?? 10;
+console.log(response);
+
+response = null ?? 'db_response'
+console.log(response);
+
+response = "db_response" ?? null;
+console.log(response);
+
+response = null ?? undefined ?? "db_response";
+console.log(response);
+
+// TERNIARY OPERATOR
+
+const userAge = 15;
+userAge >= 18 ? console.log("You can vote") : console.log("You cannot vote");
