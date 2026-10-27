@@ -4,12 +4,38 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>DOM Learning</title>
-      <script src="./21_domLearning.js"></script>
+      <script src="./22_domLearning.js" defer></script>
+      <style>
+            body {
+                  background-color: black;
+                  color: white;
+            }
+      </style>
 </head>
 <body>
-      <div class="bg-black">
-            <h1 class="heading">DOM learning on chai aur code</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, architecto!</p>
+      <div id="container">
+            <h1 id="title" class="heading-title">Title <span style="visibility: hidden;">Test Text</span></h1>
+            <a href="https://wikipedia.org" target="_blank">Search on wikipedia</a>
+      </div>
+
+      <div class="container-1">
+            <h1 class="heading" id="one">Heading 1</h1>
+            <h2 class="heading" id="two">Heading 2</h2>
+            <h3 class="heading" id="three">Heading 3</h3>
+            <h4 class="heading" id="four">Heading 4</h4>
+            <h5 class="heading" id="five">Heading 5</h5>
+      </div>
+
+      <div class="form-container">
+            <input style="padding: 5px; " type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="list-container">
+            <ul>
+                  <li>First Item</li>
+                  <li>Second Item</li>
+                  <li>Third Item</li>
+            </ul>
       </div>
 </body>
 </html>

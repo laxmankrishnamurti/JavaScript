@@ -6,4 +6,4 @@
 // console.log(document.links)
 
 const mainHeading = document.getElementById("main-heading");
-console.log("mainHeading", mainHeading);
+mainHeading.innerHTML = "<h1>Congratulation! You have successfully manipulated the DOM</h1>"
