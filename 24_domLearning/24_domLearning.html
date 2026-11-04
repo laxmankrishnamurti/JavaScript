@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DOM Learning</title>
+</head>
+<body style="background-color: rgb(83, 83, 83); color: white;">
+      <h1>DOM Learning</h1>
+
+      <ul class="language">
+            <li>JavaScript</li>
+      </ul>
+</body>
+
+<!-- JavaScript  -->
+
+<script>
+      function addNewLanguage(langName){
+            const newLi = document.createElement("li");
+            newLi.innerHTML = langName; // full-tree traversing
+            document.querySelector(".language").appendChild(newLi);
+      }
+
+      addNewLanguage("TypeScript");
+      addNewLanguage("C++");
+      addNewLanguage("Java");
+
+      function addNewLanguageInOptimizedWay(langName){
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(langName)); // 
+            document.querySelector(".language").appendChild(li);
+      }
+
+      addNewLanguageInOptimizedWay("Ruby on Rails")
+
+
+      // DOM Edit
+
+      const secondLang = document.querySelector("li:nth-child(2)");
+      const newLi = document.createElement("li");
+      newLi.textContent = "Go";
+      secondLang.replaceWith(newLi);
+
+
+      const firstChild = document.querySelector("li:nth-child(1)");
+      firstChild.outerHTML = `<li>Python</li>`
+
+
+      // Remove 
+      const lastChild = document.querySelector('.language').lastChild;
+      console.log(lastChild);
+      lastChild.remove();
+
+</script>
+
+</html>
