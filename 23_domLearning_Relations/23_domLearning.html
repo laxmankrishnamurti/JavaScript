@@ -54,6 +54,17 @@
             console.log("newDiv", newDiv); // <div></div>
             newDiv.className = "container";
             newDiv.id = Math.floor(Math.random() * 10);
+            newDiv.setAttribute("title", "myContainer");
+            newDiv.style.backgroundColor = "salmon";
+            newDiv.style.width = "200px";
+            newDiv.style.height = "200px";
+            newDiv.style.padding = "10px";
+            newDiv.style.borderRadius = "10px"
+            // newDiv.innerText = "Congratulations! A New DIV added successfully." // Set Directly after taking its reference
+            const divTextNode = document.createTextNode("Congratulations! A New DIV added successfully.");
+            newDiv.appendChild(divTextNode);
+
+            document.body.appendChild(newDiv);
       </script>
 
 </html>
