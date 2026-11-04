@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DOM Learning</title>
+</head>
+<body>
+      <h1>DOM Relations</h1>
+
+      <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+      </div>
+
+      
+</body>
+
+      <!-- JavaScript  -->
+
+      <script>
+            const parent = document.querySelector(".parent")
+            console.log("parent", parent)
+            console.log("parent children", parent.children)
+            parent.children[1].innerHTML = "Changed by JS";
+            console.log("1st index child", parent.children[1]);
+
+            for(let i = 0; i < parent.children.length; i++){
+                  if(i == 1){
+                        parent.children[1].innerHTML = "Tuesday";
+                  }
+                  console.log(parent.children[i].innerHTML);
+            }
+
+            // parent to child 
+
+            console.log("first childElement", parent.firstElementChild);
+            console.log("last childElement", parent.lastElementChild);
+
+            // child to parent 
+
+            const dayOne = document.querySelector('.day');
+            console.log("dayOne", dayOne);
+            console.log("dayOne Parent Element", dayOne.parentElement);
+            console.log("nextElementSibling", dayOne.nextElementSibling);
+
+            console.log("NODES: ", parent.childNodes);
+      </script>
+
+      <script>
+            const newDiv = document.createElement('div');
+            console.log("newDiv", newDiv); // <div></div>
+            newDiv.className = "container";
+            newDiv.id = Math.floor(Math.random() * 10);
+      </script>
+
+</html>
