@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <button id="btn">Log In</button>
+</body>
+<script>
+    document.getElementById('btn').addEventListener('click', function(e){
+        alert("Login Button Clicked!");
+        e.stopPropagation();
+    }, false) 
+
+    // false (default) => Event Bubbling / Propogation (Inside to Outside)
+    // true => Event Capturing (Outside to Inside)
+
+    // type
+    // timestamp
+    // defaultPrevented
+    // target
+    // srcElement
+    // currentTarget
+    // client X
+    // client Y
+    // screenX
+    // screenY
+    // ALT Key 
+    // CTRL key
+    // keyCode
+
+</script>
+</html>
