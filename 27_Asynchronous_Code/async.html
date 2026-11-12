@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Code</title>
+  <style>
+    #stop {
+      width: 100px;
+      height: 35px;
+      border: 2px solid white;
+      outline: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color: black; color: white;">
+  <h1>Asynchronous Code</h1>
+  <button id="stop">Stop</button>
+  <button id="prevent">Prevent Change</button>
+</body>
+<script>
+  // setTimeout(function () {
+  //   console.log("Async Task Done")
+  // }, 2000);
+
+  // setInterval(function(){
+  //   console.log("New Id", Math.floor(Math.random() * 100))
+  // }, 2000)
+
+  const changeBtn = function(){
+    document.querySelector('#stop').innerText = "Start";
+    document.querySelector('#stop').setAttribute("id", "start");
+  };
+
+  const changeBtnText = setTimeout(changeBtn, 5000);
+  document.querySelector('#prevent').addEventListener('click', function(){
+    clearTimeout(changeBtnText);
+    console.log("STOPPED!!!");
+  })
+</script>
+</html>
