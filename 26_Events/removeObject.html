@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Object</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul>
+        <li class="item">One</li>
+        <li class="item">Two</li>
+        <li class="item">Three</li>
+        <li class="item">Four</li>
+    </ul>
+</body>
+<script>
+    const items = document.querySelectorAll('.item');
+    items.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            // console.log("Target", e.target);
+            // console.log("targetNode", e.target.parentNode);
+            // e.target.remove();
+            const removableChild = e.target;
+            removableChild.parentNode.removeChild(removableChild);
+        })
+    })
+</script>
+</html>
